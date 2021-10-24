@@ -3,8 +3,16 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return HttpResponse("<h1>Hello World!!!</h1>")
+    return render(request, "general/index.html")
+
+def about(request):
+    return render(request, "general/about.html")
+
+def contacts(request):
+    return render(request, "general/contacts.html")
 
 def greeting(request, name):
-    return HttpResponse(f"<h1>Hello, {name}!</h1>")
+    return render(request, "general/greeting.html", {
+        "name": name.capitalize()
+    })
 

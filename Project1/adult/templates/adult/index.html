@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are you adult?</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="Введіть свій вік?">
+    </form>
+    <h1>Вам {{age}}</h1>
+    <!-- <h1>Вам виповнилось 18 років</h1>
+    <h1>Вам не виповнилось 18 років</h1> -->
+
+    {% if age >= 18 %}
+        <h1>Вам виповнилось 18 років</h1>
+    {% else %}
+        <h1>Вам не виповнилось 18 років</h1>
+    {% endif %}
+</body>
+</html>
