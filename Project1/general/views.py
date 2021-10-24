@@ -4,3 +4,7 @@ from django.shortcuts import render
 # Create your views here.
 def index(request):
     return HttpResponse("<h1>Hello World!!!</h1>")
+
+def greeting(request, name):
+    return HttpResponse(f"<h1>Hello, {name}!</h1>")
+
